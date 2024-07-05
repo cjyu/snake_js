@@ -1,0 +1,56 @@
+/* .game-area {
+    position: relative;
+    width: 400px;
+    height: 400px;
+    border: 1px solid black;
+  }
+  
+  .snake-segment, .food {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background-color: green;
+  }
+  
+  .food {
+    background-color: red;
+  } */
+  
+  /* Add this to the body to make the entire page flex-centered */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #333; /* Optional: changes the background color of the entire page */
+    color: white;
+    font-family: Arial, sans-serif;
+  }
+  
+  /* Styling the game area */
+  .game-area {
+    width: 400px;
+    height: 400px;
+    position: relative;
+    background: black;
+    border: 2px solid white; /* Makes the border more visible */
+  }
+  
+  /* Adjusting snake and food blocks to be responsive based on game area size */
+  .snake-segment, .food {
+    position: absolute;
+    width: calc(80vw / 20); /* Width and height based on the number of blocks (assuming 20x20 grid) */
+    height: calc(80vw / 20);
+    max-width: 30px; /* Ensures blocks do not become too large */
+    max-height: 30px;
+  }
+  
+  .snake-segment {
+    background-color: green;
+  }
+  
+  .food {
+    background-color: red;
+  }
+  
